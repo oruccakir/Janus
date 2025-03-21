@@ -218,8 +218,6 @@ class MultiModalityCausalLM(MultiModalityPreTrainedModel):
         language_config = config.language_config
         self.language_model = LlamaForCausalLM(language_config)
 
-        self.get_weights_distribution_flag = False
-        self.layers_weights_distribution_map = {}
 
     def prepare_inputs_embeds(
         self,
